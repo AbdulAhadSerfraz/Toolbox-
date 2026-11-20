@@ -75,7 +75,7 @@ writeLn(fail === 0 ? 'ALL PASS' : fail + ' FAILED');
 Run it (absolute path required):
 
 ```powershell
-& 'C:\Program Files\ArtCraft\EffectCraft\effectcraft-cli.exe' script 'C:\Users\Abdul Ahad\Documents\Default Project\test.<file>.js' --demo
+& 'C:\Program Files\ArtCraft\EffectCraft\effectcraft-cli.exe' script 'C:\path\to\test.<file>.js' --demo
 ```
 
 Notes: `--demo` opens the bundled demo project and **discards** all changes (no `--save`),
