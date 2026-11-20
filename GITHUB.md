@@ -2,13 +2,19 @@
 
 Everything you need to fill in on GitHub, in the order the site asks for it.
 
+**Live repository:** <https://github.com/AbdulAhadSerfraz/Toolbox->
+**Release:** <https://github.com/AbdulAhadSerfraz/Toolbox-/releases/tag/v1.0.0>
+
+This sheet is kept as a record of what was published; the fields below are
+already applied to the live repo.
+
 ---
 
 ## 1. Repository
 
 | Field | Value |
 | --- | --- |
-| **Repository name** | `toolbox-effectcraft` |
+| **Repository name** | `Toolbox-` (owner `AbdulAhadSerfraz`) |
 | **Display title** | Toolbox — a 174-tool panel for EffectCraft |
 | **About / short description** (≤350 chars) | A dockable ScriptUI toolbox for EffectCraft: 174 tools for selection, layers, keyframes, easing, composition, project cleanup, guides, view, expressions, shapes, text and animation — with search and a hand-drawn icon grid. |
 | **Website** | *(leave empty, or link your release page)* |
@@ -99,42 +105,42 @@ First public release of the Toolbox panel for EffectCraft.
 
 ## 4. Publishing commands
 
-Run these inside the `Toolbox-Panel` folder. They work with either GitHub CLI
-or a plain remote.
+Run these inside the `Toolbox-Panel` folder.
 
-### Option A — GitHub CLI (recommended)
+> **Already done.** The repo is published and the `v1.0.0` release is live with
+> `Toolbox.jsx` attached. The commands below are for future releases.
+
+### Option A — push to the existing remote
 
 ```powershell
-# once per machine (opens a browser, no token pasting needed)
+cd 'C:\Users\Abdul Ahad\Documents\Default Project\Toolbox-Panel'
+
+git add .
+git commit -m "Describe the change"
+git push
+
+# new release
+git tag -a v1.0.1 -m "Toolbox 1.0.1"
+git push origin v1.0.1
+```
+
+### Option B — GitHub CLI (if you install `gh`)
+
+```powershell
 gh auth login
-
-# identity used for the commits
-git config --global user.name  "Your Name"
-git config --global user.email "you@example.com"
-
-cd 'C:\Users\Abdul Ahad\Documents\Default Project\Toolbox-Panel'
-git init -b main
-git add .
-git commit -m "Toolbox 1.0.0: 174-tool ScriptUI panel for EffectCraft"
-gh repo create toolbox-effectcraft --public --source . --remote origin --push
+gh release create v1.0.1 Toolbox.jsx --title "Toolbox 1.0.1" --notes-file RELEASE_NOTES.md
 ```
 
-Then create the release:
+### Repository facts
 
-```powershell
-gh release create v1.0.0 Toolbox.jsx --title "Toolbox 1.0.0 — initial release" --notes-file RELEASE_NOTES.md
+```
+origin   https://github.com/AbdulAhadSerfraz/Toolbox-.git
+branch   main
+identity Abdul Ahad <AbdulAhadSerfraz@users.noreply.github.com>  (repo-local)
 ```
 
-### Option B — create the repo on the website first
-
-```powershell
-cd 'C:\Users\Abdul Ahad\Documents\Default Project\Toolbox-Panel'
-git init -b main
-git add .
-git commit -m "Toolbox 1.0.0: 174-tool ScriptUI panel for EffectCraft"
-git remote add origin https://github.com/<your-username>/toolbox-effectcraft.git
-git push -u origin main
-```
+Credentials come from Git Credential Manager (`credential.helper=manager`), so
+`git push` authenticates without pasting a token.
 
 ### Updating later
 
@@ -150,10 +156,12 @@ git push
 
 ## 5. Credentials — what to use and what never to commit
 
-- **Sign-in:** use `gh auth login` (browser flow) or the GitHub website. Never
-  create a personal access token and paste it into a file in this repo.
-- **Git identity:** set `user.name` / `user.email` globally once (see above).
-  Use the email tied to your GitHub account so commits are attributed to you.
+- **Sign-in:** Git Credential Manager is already configured and the push works
+  without a token prompt. If you install `gh`, prefer `gh auth login` (browser
+  flow). Never paste a personal access token into a file in this repo.
+- **Git identity:** set per-repository (already done):
+  `git config user.name "Abdul Ahad"` and
+  `git config user.email "AbdulAhadSerfraz@users.noreply.github.com"`.
 - **`.gitignore` already excludes** logs, editor folders, OS junk, `archive/`
   and `backup/`, so no local history or duplicate binaries are uploaded.
 - **Never commit:** `.env`, tokens, `*.pem`, `*.key`, or anything under
