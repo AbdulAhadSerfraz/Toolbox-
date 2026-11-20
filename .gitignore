@@ -1,0 +1,30 @@
+# --- Local history and duplicate binaries (kept on disk, not published) ---
+archive/
+backup/
+
+# --- Logs and temporary output ---
+*.log
+*.tmp
+*.bak
+*.orig
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- OS junk ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+._*
+
+# --- Never commit credentials ---
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+secrets.*
