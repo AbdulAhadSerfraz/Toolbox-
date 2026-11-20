@@ -16,7 +16,7 @@ already applied to the live repo.
 | --- | --- |
 | **Repository name** | `Toolbox-` (owner `AbdulAhadSerfraz`) |
 | **Display title** | Toolbox — a 174-tool panel for EffectCraft |
-| **About / short description** (≤350 chars) | A dockable ScriptUI toolbox for EffectCraft: 174 tools for selection, layers, keyframes, easing, composition, project cleanup, guides, view, expressions, shapes, text and animation — with search and a hand-drawn icon grid. |
+| **About / short description** (≤350 chars) | 174-tool dockable panel for EffectCraft — selection, layers, keyframes, easing, guides, shapes, text and animation, with search and hand-drawn icons. |
 | **Website** | *(leave empty, or link your release page)* |
 | **Visibility** | Public |
 | **Initialize with** | None — this folder already has the README, LICENSE and .gitignore |
