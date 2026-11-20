@@ -75,7 +75,7 @@ writeLn(fail === 0 ? 'ALL PASS' : fail + ' FAILED');
 Run it (absolute path required):
 
 ```powershell
-& 'F:\artcraft app\EffectCraft\effectcraft-cli.exe' script 'C:\Users\Abdul Ahad\Documents\Default Project\test.<file>.js' --demo
+& 'C:\Program Files\ArtCraft\EffectCraft\effectcraft-cli.exe' script 'C:\Users\Abdul Ahad\Documents\Default Project\test.<file>.js' --demo
 ```
 
 Notes: `--demo` opens the bundled demo project and **discards** all changes (no `--save`),
@@ -87,7 +87,7 @@ Deliverable per module: source + a test that ends in `ALL PASS`.
 ## Probing before you build
 
 ```powershell
-& 'F:\artcraft app\EffectCraft\effectcraft-cli.exe' script 'C:\...\probe.js' --demo
+& 'C:\Program Files\ArtCraft\EffectCraft\effectcraft-cli.exe' script 'C:\...\probe.js' --demo
 ```
 where `probe.js` does `#include "src/core.js"` etc. and prints `typeof` for the APIs you
 need, then a tiny exercise of each. `spec\commands.txt` is the full engine command list.

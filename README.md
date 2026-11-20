@@ -99,7 +99,7 @@ Tests run headlessly and discard their changes, so they never touch a real
 project:
 
 ```powershell
-$cli = 'F:\artcraft app\EffectCraft\effectcraft-cli.exe'
+$cli = 'C:\Program Files\ArtCraft\EffectCraft\effectcraft-cli.exe'   # adjust if installed elsewhere
 & $cli script (Resolve-Path .\test.core.js)   --demo
 & $cli script (Resolve-Path .\test.panel.js)  --demo
 & $cli script (Resolve-Path .\test.sweep.js)  --demo   # all 174 tools
